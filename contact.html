@@ -13,12 +13,23 @@
             padding-top: 100px;
             padding-bottom: 50px;
         }
+
+        .form-label {
+            color: #b28d55;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .btn-gradient {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Shining Light Psychic Medium</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -44,18 +55,18 @@
                 <form id="contact-form" method="POST" action="#">
                     <!-- Note: The Web3 contact form requires an API key, which is not included -->
                     <div class="mb-3">
-                        <label for="name" class="form-label gold-text">Name</label>
+                        <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label gold-text">Email</label>
+                        <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label gold-text">Message</label>
+                        <label for="message" class="form-label">Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-gold">Send Message</button>
+                    <button type="submit" class="btn btn-gradient">Send Message</button>
                 </form>
             </div>
         </div>

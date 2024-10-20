@@ -13,8 +13,8 @@
             background-image: url('smokey-background.jpg');
             background-size: cover;
             background-position: center;
-            color: #fff;
-            padding: 150px 0;
+            color: #ffffff;
+            padding: 200px 0;
             text-align: center;
             position: relative;
         }
@@ -26,7 +26,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
         }
 
         .hero-content {
@@ -36,38 +36,44 @@
 
         .hero h1 {
             font-size: 4em;
-            text-shadow: 2px 2px #000;
+            background: linear-gradient(to right, #b28d55, #d4a56d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px #000000;
         }
 
         .hero p {
             font-size: 1.5em;
         }
 
-        /* Gold Text Effect */
-        .gold-text {
-            background: linear-gradient(to right, #FFD700, #E6BE8A);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
         /* Testimonials */
         .testimonial-carousel {
-            background-color: #1a1a1a;
+            background-color: #000000;
             padding: 50px 0;
         }
 
         .testimonial-item {
-            color: #fff;
+            color: #ffffff;
             text-align: center;
             padding: 20px;
             font-style: italic;
+        }
+
+        .testimonial-item p {
+            background: linear-gradient(to right, #b28d55, #d4a56d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #b28d55;
         }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Shining Light Psychic Medium</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -86,62 +92,62 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="gold-text">Welcome to Shining Light Psychic Medium</h1>
+            <h1>Welcome to Shining Light Psychic Medium</h1>
             <p>Guiding you to clarity with compassion and insight.</p>
-            <a href="services.html" class="btn btn-gold mt-3">Explore Services</a>
+            <a href="services.html" class="btn btn-gradient mt-4">Explore Services</a>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about-me" class="container">
+    <section id="about-me" class="container mt-5">
         <h2 class="section-title">About Me</h2>
         <div class="row align-items-center">
             <div class="col-md-4 text-center">
-                <img src="placeholder-profile.jpg" alt="Dale Harty" class="img-fluid rounded-circle mb-3" style="border: 5px solid #FFD700;">
+                <img src="placeholder-profile.jpg" alt="Dale Harty" class="img-fluid rounded-circle mb-3" style="border: 5px solid #b28d55;">
             </div>
             <div class="col-md-8">
                 <p>
                     Dale Harty is a gifted psychic medium who has dedicated her life to helping others find clarity and peace. With years of experience, she offers compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
                 </p>
-                <a href="#detailed-bio" class="btn btn-gold mt-3">Learn More About My Journey</a>
+                <a href="#detailed-bio" class="btn btn-gradient mt-3">Learn More About My Journey</a>
             </div>
         </div>
     </section>
 
     <!-- Services Overview Section -->
-    <section id="services-overview" class="container">
+    <section id="services-overview" class="container mt-5">
         <h2 class="section-title">Services Overview</h2>
         <div class="row text-center">
             <div class="col-md-4 mb-4">
-                <div class="card bg-dark text-white h-100">
+                <div class="card bg-transparent border-0 h-100">
                     <img src="placeholder-service1.jpg" class="card-img-top" alt="Psychic Mediumship">
                     <div class="card-body">
-                        <h5 class="card-title gold-text">Psychic Mediumship</h5>
+                        <h5 class="card-title">Psychic Mediumship</h5>
                         <p class="card-text">Connecting you with the spiritual realm.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card bg-dark text-white h-100">
+                <div class="card bg-transparent border-0 h-100">
                     <img src="placeholder-service2.jpg" class="card-img-top" alt="Animal Communication">
                     <div class="card-body">
-                        <h5 class="card-title gold-text">Animal Communication</h5>
+                        <h5 class="card-title">Animal Communication</h5>
                         <p class="card-text">Understanding your pets on a deeper level.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card bg-dark text-white h-100">
+                <div class="card bg-transparent border-0 h-100">
                     <img src="placeholder-service3.jpg" class="card-img-top" alt="Distance Reiki Healing">
                     <div class="card-body">
-                        <h5 class="card-title gold-text">Distance Reiki Healing</h5>
+                        <h5 class="card-title">Distance Reiki Healing</h5>
                         <p class="card-text">Healing energy sent directly to you.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt-4">
-            <a href="services.html" class="btn btn-gold">View Full Services</a>
+            <a href="services.html" class="btn btn-gradient">View Full Services</a>
         </div>
     </section>
 
@@ -172,7 +178,7 @@
     </section>
 
     <!-- How I Conduct Readings Section -->
-    <section id="how-i-conduct-readings" class="container">
+    <section id="how-i-conduct-readings" class="container mt-5">
         <h2 class="section-title">How I Conduct Readings</h2>
         <p>
             I offer both online and in-person readings to suit your needs. My aim is to create a calm and safe atmosphere where you feel comfortable and open. For online readings, please note that advance payment is required to secure your booking.
@@ -180,7 +186,7 @@
     </section>
 
     <!-- Privacy and Legal Disclaimer Section -->
-    <section id="privacy-disclaimer" class="container">
+    <section id="privacy-disclaimer" class="container mt-5 mb-5">
         <h2 class="section-title">Privacy & Legal Disclaimer</h2>
         <p>
             Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Please be aware that while my services can be therapeutic, they are also considered entertainment.

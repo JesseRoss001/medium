@@ -12,6 +12,13 @@
         .service-card {
             background-color: #1a1a1a;
             border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .service-card img {
+            border-bottom: 3px solid #b28d55;
         }
 
         .service-card .card-body {
@@ -19,23 +26,33 @@
         }
 
         .service-card .card-title {
-            color: #FFD700;
-            font-size: 1.5em;
+            font-family: 'Playfair Display', serif;
+            color: #b28d55;
+            font-size: 1.8em;
         }
 
         .service-card .card-text {
-            color: #ccc;
+            color: #cccccc;
+            margin-top: 10px;
         }
 
-        .service-card img {
-            border-bottom: 3px solid #FFD700;
+        .service-card .card-footer {
+            background: none;
+            border-top: 1px solid #4b3069;
+            padding-top: 10px;
+        }
+
+        .service-card .price {
+            font-family: 'Raleway', sans-serif;
+            color: #d4a56d;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Shining Light Psychic Medium</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -55,8 +72,9 @@
     <section id="services" class="container mt-5 pt-5">
         <h1 class="section-title">Our Services</h1>
         <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card service-card h-100">
+            <!-- Service Card -->
+            <div class="col-md-6">
+                <div class="card service-card">
                     <img src="placeholder-service1.jpg" class="card-img-top" alt="Psychic Mediumship">
                     <div class="card-body">
                         <h3 class="card-title">Psychic Mediumship</h3>
@@ -64,13 +82,14 @@
                             Experience a deep connection with the spiritual realm. Dale offers psychic readings that provide insight into your past, present, and future, helping you navigate life's challenges.
                         </p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <p class="gold-text">Price: $100/hour</p>
+                    <div class="card-footer">
+                        <p class="price">Price: $100/hour</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card service-card h-100">
+            <!-- Service Card -->
+            <div class="col-md-6">
+                <div class="card service-card">
                     <img src="placeholder-service2.jpg" class="card-img-top" alt="Animal Communication">
                     <div class="card-body">
                         <h3 class="card-title">Animal Communication</h3>
@@ -78,13 +97,14 @@
                             Dale connects with animals to understand their needs and feelings, offering comfort and clarity to pet owners. This service can be conducted remotely, ensuring your pet's comfort.
                         </p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <p class="gold-text">Price: $80/hour</p>
+                    <div class="card-footer">
+                        <p class="price">Price: $80/hour</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card service-card h-100">
+            <!-- Service Card -->
+            <div class="col-md-6">
+                <div class="card service-card">
                     <img src="placeholder-service3.jpg" class="card-img-top" alt="Distance Reiki Healing">
                     <div class="card-body">
                         <h3 class="card-title">Distance Reiki Healing</h3>
@@ -92,13 +112,14 @@
                             Experience the healing power of Reiki from anywhere. Dale channels energy to promote relaxation, reduce stress, and support overall healing.
                         </p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <p class="gold-text">Price: $70/hour</p>
+                    <div class="card-footer">
+                        <p class="price">Price: $70/hour</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card service-card h-100">
+            <!-- Service Card -->
+            <div class="col-md-6">
+                <div class="card service-card">
                     <img src="placeholder-service4.jpg" class="card-img-top" alt="Oracle Card Reading">
                     <div class="card-body">
                         <h3 class="card-title">Oracle Card, Ribbon, and Flower Readings</h3>
@@ -106,13 +127,14 @@
                             Gain insights and guidance through various reading methods. Whether it's oracle cards, ribbon readings, or interpreting the meanings of flowers, Dale provides personalized sessions to enlighten your path.
                         </p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <p class="gold-text">Price: $60/hour</p>
+                    <div class="card-footer">
+                        <p class="price">Price: $60/hour</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 mb-4">
-                <div class="card service-card h-100">
+            <!-- Service Card -->
+            <div class="col-md-12">
+                <div class="card service-card">
                     <img src="placeholder-service5.jpg" class="card-img-top" alt="Party Invitations and Demonstrations">
                     <div class="card-body">
                         <h3 class="card-title">Party Invitations and Demonstrations</h3>
@@ -120,8 +142,8 @@
                             Make your event unforgettable with group readings or demonstrations. Dale is available for parties and gatherings, offering an engaging experience for all attendees.
                         </p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <p class="gold-text">Price: Contact for pricing</p>
+                    <div class="card-footer">
+                        <p class="price">Price: Contact for pricing</p>
                     </div>
                 </div>
             </div>
@@ -133,7 +155,7 @@
             <p>
                 All online readings must be paid for in advance. Please use the contact form to book your session.
             </p>
-            <a href="contact.html" class="btn btn-gold">Book a Reading</a>
+            <a href="contact.html" class="btn btn-gradient">Book a Reading</a>
         </section>
     </section>
 

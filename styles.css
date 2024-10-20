@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar, .footer {
+    background-color: #4B0082; /* Purple color */
+}
+
+.navbar-brand, .nav-link, .footer a {
+    color: #FFD700 !important; /* Gold color */
+}
+
+.nav-link:hover {
+    color: #E6BE8A !important;
+}
+
+.navbar-toggler-icon {
+    color: #FFD700;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #FFD700;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #E6BE8A;
+}
+
+/* Buttons */
+.btn-gold {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: #E6BE8A;
+    color: #000;
+}
+
+/* Section Titles */
+.section-title {
+    color: #FFD700;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #4B0082;
+}
+
+.form-control:focus {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #FFD700;
+}
+
+/* Additional Styles for Consistency */
+a {
+    color: #FFD700;
+}
+
+a:hover {
+    color: #E6BE8A;
+}
+
+hr {
+    border-top: 1px solid #4B0082;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+}

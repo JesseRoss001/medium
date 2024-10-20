@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shining Light Psychic Medium - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styles for Home Page */
+        .hero {
+            background-image: url('smokey-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        /* Gold Text Effect */
+        .gold-text {
+            background: linear-gradient(to right, #FFD700, #E6BE8A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Testimonials */
+        .testimonial-carousel {
+            background-color: #1a1a1a;
+            padding: 50px 0;
+        }
+
+        .testimonial-item {
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Shining Light Psychic Medium</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="gold-text">Welcome to Shining Light Psychic Medium</h1>
+            <p>Guiding you to clarity with compassion and insight.</p>
+            <a href="services.html" class="btn btn-gold mt-3">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="placeholder-profile.jpg" alt="Dale Harty" class="img-fluid rounded-circle mb-3" style="border: 5px solid #FFD700;">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Dale Harty is a gifted psychic medium who has dedicated her life to helping others find clarity and peace. With years of experience, she offers compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
+                </p>
+                <a href="#detailed-bio" class="btn btn-gold mt-3">Learn More About My Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services-overview" class="container">
+        <h2 class="section-title">Services Overview</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white h-100">
+                    <img src="placeholder-service1.jpg" class="card-img-top" alt="Psychic Mediumship">
+                    <div class="card-body">
+                        <h5 class="card-title gold-text">Psychic Mediumship</h5>
+                        <p class="card-text">Connecting you with the spiritual realm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white h-100">
+                    <img src="placeholder-service2.jpg" class="card-img-top" alt="Animal Communication">
+                    <div class="card-body">
+                        <h5 class="card-title gold-text">Animal Communication</h5>
+                        <p class="card-text">Understanding your pets on a deeper level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white h-100">
+                    <img src="placeholder-service3.jpg" class="card-img-top" alt="Distance Reiki Healing">
+                    <div class="card-body">
+                        <h5 class="card-title gold-text">Distance Reiki Healing</h5>
+                        <p class="card-text">Healing energy sent directly to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="services.html" class="btn btn-gold">View Full Services</a>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="testimonial-carousel">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-item">
+                <p>"Dale's reading brought me so much peace. She connected with my grandmother in a way that was truly touching." - A.S.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item">
+                <p>"Her insights were spot-on and helped me make a difficult decision with confidence." - J.M.</p>
+              </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+    </section>
+
+    <!-- How I Conduct Readings Section -->
+    <section id="how-i-conduct-readings" class="container">
+        <h2 class="section-title">How I Conduct Readings</h2>
+        <p>
+            I offer both online and in-person readings to suit your needs. My aim is to create a calm and safe atmosphere where you feel comfortable and open. For online readings, please note that advance payment is required to secure your booking.
+        </p>
+    </section>
+
+    <!-- Privacy and Legal Disclaimer Section -->
+    <section id="privacy-disclaimer" class="container">
+        <h2 class="section-title">Privacy & Legal Disclaimer</h2>
+        <p>
+            Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Please be aware that while my services can be therapeutic, they are also considered entertainment.
+        </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <p>Contact Me: <a href="mailto:dale@example.com">dale@example.com</a> | <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <!-- Add other social media icons as needed -->
+            </div>
+            <p>&copy; 2023 Shining Light Psychic Medium</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <!-- Include Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

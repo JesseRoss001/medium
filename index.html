@@ -324,9 +324,10 @@
             padding: 20px;
             margin-bottom: 1.5rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: inline-block;
-            width: 100%;
+            /* Removed display: inline-block; and width: 100%; */
             transition: transform 0.3s ease;
+            break-inside: avoid; /* Prevents breaking inside columns */
+            /* Optional: Add margin or padding as needed */
         }
         
         .testimonial-card:hover {
@@ -365,11 +366,12 @@
         }
         
         /* Footer */
-     .footer {
-    background: radial-gradient(circle, #4b3069, #000000);
-    padding: 20px 0;
-    text-align: center;
-}
+        .footer {
+            background: radial-gradient(circle, #4b3069, #000000);
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
         .footer a {
             color: #d4a56d;
             text-decoration: none;
@@ -419,7 +421,7 @@
             }
         }
     </style>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -427,7 +429,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <!-- Website Title - Visible on All Screens -->
-            <a class="navbar-title text-center pt-3 " href="#">Shining Light Psychic Medium</a>
+            <a class="navbar-title text-center pt-3" href="#">Shining Light Psychic Medium</a>
             
             <!-- Navbar Toggler - Visible Only on Small Screens -->
             <button class="navbar-toggler custom-navbar-toggler pt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
@@ -549,13 +551,12 @@
                     <p class="reviewer-name">- Fiona</p>
                 </div>
                 <div class="testimonial-card">
-              <p class="review-text">"Had my first reading with Dale today on one of his lives. He is very talented, picked up on many things that have recently been happening in my life as well as things from my past lives that I am aware of. There were multiple things that he picked up on that were accurate. Very gifted - Highly recommended."</p>
+                    <p class="review-text">"Had my first reading with Dale today on one of his lives. He is very talented, picked up on many things that have recently been happening in my life as well as things from my past lives that I am aware of. There were multiple things that he picked up on that were accurate. Very gifted - Highly recommended."</p>
                     <p class="reviewer-name">- Missy</p>
                 </div>
                 <!-- Additional Reviews (Initially Hidden) -->
                 <div class="testimonial-card d-none">
-                
-          <p class="review-text">"Well what can I say? Dale and I were chatting today, and we both ended up giving readings to each other. Dale was very accurate and actually, word for word said something to me about my sister. I relayed all the messages to her, and she said that she had been to a medium last week, and Dale had told me the exact message that spirit gave to my sister through a different medium. Also Dale, she has already put diesel in her petrol car and swore! Many of my spirit family came through and passed messages on which I was able to relate to. Dale is one of those rare genuine souls who cares about the messages he passes on. A fantastic afternoon Dale, I cannot believe we spoke for nearly three hours! To anyone still hesitating, book a reading with Dale, you will not be disappointed, he will put you at your ease and offer excellent, caring advice and messages. A true genuine spiritual medium. Love and Light Dale."</p>
+                    <p class="review-text">"Well what can I say? Dale and I were chatting today, and we both ended up giving readings to each other. Dale was very accurate and actually, word for word said something to me about my sister. I relayed all the messages to her, and she said that she had been to a medium last week, and Dale had told me the exact message that spirit gave to my sister through a different medium. Also Dale, she has already put diesel in her petrol car and swore! Many of my spirit family came through and passed messages on which I was able to relate to. Dale is one of those rare genuine souls who cares about the messages he passes on. A fantastic afternoon Dale, I cannot believe we spoke for nearly three hours! To anyone still hesitating, book a reading with Dale, you will not be disappointed, he will put you at your ease and offer excellent, caring advice and messages. A true genuine spiritual medium. Love and Light Dale."</p>
                     <p class="reviewer-name">- Lorraine</p>
                 </div>
                 <div class="testimonial-card d-none">

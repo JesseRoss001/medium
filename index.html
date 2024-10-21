@@ -19,14 +19,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
     <!-- Custom Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <style>
-        /* Body and General Styles */
+        /* General Styles */
         body {
             font-family: 'Raleway', sans-serif;
             margin: 0;
@@ -34,28 +32,183 @@
             background-color: #ffffff; /* Set body background to white */
             color: #333333; /* Set default text color to dark */
         }
-        /* Navbar */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.9);
+        
+        /* Custom Navbar Styles */
+        .custom-navbar {
+            background: linear-gradient(to bottom, #000000, #4b3069); /* Preserved gradient */
             padding: 15px 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
         }
-        .navbar-brand {
+        
+        .custom-navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        /* Website Title */
+        .navbar-title {
             font-family: 'Playfair Display', serif;
-            color: #4b3069;
+            color: #dbccb6;
             font-size: 1.8em;
+            text-transform: uppercase;
+            text-decoration: none;
         }
-        .nav-link {
-            color: #4b3069;
-            margin-left: 15px;
-            font-weight: 600;
-        }
-        .nav-link.active {
+        
+        .navbar-title:hover {
             color: #d4a56d;
         }
+        
+        /* Logo Styles */
+        .custom-navbar-logo {
+            width: 200px;
+            height: auto;
+            border: 3px solid #b28d55; /* Purple outline */
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        
+        /* Center Logo on Large Screens */
+        @media (min-width: 992px) {
+            .navbar-center-logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Navigation Links */
+        .custom-navbar-nav {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .custom-navbar-nav .nav-link {
+            color: #dbccb6 !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+        
+        /* Remove border and outline on active and hover for navbar links */
+        .nav-link {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link:active,
+        .nav-link.active {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: none !important;
+            color: #dbccb6 !important;
+        }
+        
+        /* Navbar Toggler */
+        .custom-navbar-toggler {
+            border: none;
+            color: #b28d55;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        .custom-navbar-toggler .navbar-toggler-icon {
+            color: #b28d55;
+            font-size: 1.5em;
+            padding-top: 0px;
+        }
+        
+        /* Remove border and outline for navbar toggler */
+        .navbar-toggler {
+            box-shadow: none !important;
+            outline: none !important;
+            border: none !important;
+        }
+        
+        .navbar-toggler:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Offcanvas Side Menu */
+        .custom-offcanvas {
+            background: linear-gradient(to bottom, #000000, #4b3069); /* Preserved gradient */
+            color: #dbccb6;
+        }
+        
+        .custom-offcanvas .offcanvas-header {
+            border-bottom: 1px solid #4b3069;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .custom-offcanvas .offcanvas-logo {
+            width: 200px;
+            height: auto;
+            border: 3px solid #b28d55; /* Purple outline */
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        
+        /* Navigation Links in Offcanvas */
+        .custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link {
+            color: #dbccb6 !important;
+            padding: 0.5rem 0;
+            text-align: center;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+        
+        .custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link:hover,
+        .custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link:focus,
+        .custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link.active {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: none !important;
+            color: #dbccb6 !important;
+        }
+        
+        /* Hide navbar links on small screens */
+        @media (max-width: 991.98px) {
+            .custom-navbar-links {
+                display: none !important;
+            }
+        }
+        
+        /* Show navbar links on medium and large screens */
+        @media (min-width: 992px) {
+            .custom-navbar-links {
+                display: flex !important;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+        
+        /* Responsive Logo Sizes in Offcanvas */
+        @media (max-width: 991.98px) {
+            .custom-offcanvas .offcanvas-logo {
+                width: 150px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .custom-offcanvas .offcanvas-logo {
+                width: 120px;
+            }
+        }
+        
         /* Hero Section */
         .hero {
             background-color: #ffffff; /* Change hero background to white */
@@ -64,11 +217,13 @@
             position: relative;
             color: #333333; /* Set text color to dark */
         }
+        
         .hero-content {
             position: relative;
             z-index: 1;
             padding: 0 15px;
         }
+        
         .hero h1 {
             font-size: 3em;
             background: linear-gradient(to right, #b28d55, #d4a56d);
@@ -76,14 +231,17 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
         }
+        
         .hero p {
             font-size: 1.2em;
             margin-bottom: 30px;
         }
+        
         /* Remove hero overlay */
         .hero::after {
             display: none;
         }
+        
         /* Section Titles */
         .section-title {
             font-family: 'Playfair Display', serif;
@@ -94,6 +252,7 @@
             font-size: 2.5em;
             position: relative;
         }
+        
         .section-title::after {
             content: '';
             width: 60px;
@@ -102,6 +261,7 @@
             display: block;
             margin: 10px auto;
         }
+        
         /* About Me */
         #about-me img {
             border: 5px solid #b28d55;
@@ -109,6 +269,7 @@
             height: auto;
             margin-bottom: 20px;
         }
+        
         /* Button Gradient */
         .btn-gradient {
             background: linear-gradient(to right, #b28d55, #d4a56d);
@@ -118,34 +279,115 @@
             border-radius: 30px;
             font-weight: 600;
             transition: background 0.3s ease;
+            text-decoration: none;
         }
+        
         .btn-gradient:hover {
             background: linear-gradient(to right, #d4a56d, #b28d55);
             color: #ffffff;
+            text-decoration: none;
         }
-        /* Testimonials */
-        .testimonial-carousel {
-            background-color: #ffffff; /* White background */
-            padding: 60px 0;
-            color: #333333; /* Dark text */
+        
+        /* Services Card */
+        .service-card {
+            border: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        .testimonial-carousel .section-title {
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Testimonials - Masonry Layout */
+        .testimonial-container {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        
+        @media (min-width: 576px) {
+            .testimonial-container {
+                column-count: 2;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .testimonial-container {
+                column-count: 3;
+            }
+        }
+        
+        .testimonial-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: inline-block;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .reviewer-name {
+            font-weight: 700;
             color: #4b3069;
+            margin-bottom: 10px;
         }
-        .testimonial-item {
-            text-align: center;
-            padding: 15px;
+        
+        .review-text {
             font-style: italic;
+            color: #555555;
         }
-        .testimonial-item p {
-            font-size: 1em;
+        
+        /* Show More Button */
+        .show-more-btn {
+            display: block;
+            margin: 0 auto;
+            background: linear-gradient(to right, #b28d55, #d4a56d);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
         }
-        .carousel-indicators [data-bs-target] {
-            background-color: #d4a56d;
+        
+        .show-more-btn:hover {
+            background: linear-gradient(to right, #d4a56d, #b28d55);
+            text-decoration: none;
         }
+        
         /* Footer */
-  
-    
+     .footer {
+    background: radial-gradient(circle, #4b3069, #000000);
+    padding: 20px 0;
+    text-align: center;
+}
+        .footer a {
+            color: #d4a56d;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        
+        .social-icons a {
+            color: #b28d55;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4a56d;
+        }
+        
         /* Responsive Adjustments */
         @media (max-width: 767px) {
             .hero {
@@ -161,6 +403,7 @@
                 font-size: 2em;
             }
         }
+        
         @media (max-width: 576px) {
             .hero {
                 padding: 60px 0;
@@ -176,53 +419,54 @@
             }
         }
     </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-
-    <!-- Navbar (Do Not Restyle) -->
-  <nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container">
-        <!-- Website Title - Visible on All Screens -->
-        <a class="navbar-title" href="#">Shining Light Psychic Medium</a>
-        
-        <!-- Navbar Toggler - Visible Only on Small Screens -->
-        <button class=" mx-auto my-auto navbar-toggler custom-navbar-toggler pt-0 pt-sm-3 pt-md-3 " type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-            <span class="navbar-toggler-icon"><i class="bi bi-list "></i></span>
-        </button>
-        
-        <!-- Logo - Centered on Medium and Large Screens -->
-   
-        
-        <!-- Navbar Links - Visible Only on Medium and Large Screens -->
-        <div class="collapse navbar-collapse custom-navbar-links">
-            <ul class="navbar-nav ms-auto custom-navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        
-        <!-- Offcanvas Side Menu - Visible Only on Small Screens -->
-        <div class="d-block d-lg-none offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-            <div class="offcanvas-header d-flex justify-content-center align-items-center">
-                <!-- Logo Inside Offcanvas Menu -->
-                <a class="navbar-brand mx-auto my-auto" href="#">
-                    <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729498511/SLPM_logo_ttnmes.jpg" alt="Shining Light Psychic Medium Logo" class="custom-navbar-logo offcanvas-logo ">
-                </a>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav custom-navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <!-- Website Title - Visible on All Screens -->
+            <a class="navbar-title text-center pt-3 " href="#">Shining Light Psychic Medium</a>
+            
+            <!-- Navbar Toggler - Visible Only on Small Screens -->
+            <button class="navbar-toggler custom-navbar-toggler pt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <i class="bi bi-list"></i>
+            </button>
+            
+            <!-- Logo - Centered on Large Screens -->
+            <a class="navbar-brand navbar-center-logo d-none d-lg-block" href="#">
+                <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729498511/SLPM_logo_ttnmes.jpg" alt="Shining Light Psychic Medium Logo" class="custom-navbar-logo">
+            </a>
+            
+            <!-- Navigation Links - Visible Only on Large Screens -->
+            <div class="collapse navbar-collapse custom-navbar-links pt-3">
+                <ul class="navbar-nav ms-auto custom-navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            
+            <!-- Offcanvas Side Menu - Visible Only on Small Screens -->
+            <div class="offcanvas offcanvas-start custom-offcanvas d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <!-- Logo Inside Offcanvas Menu -->
+                    <a class="navbar-brand mx-auto my-auto" href="#">
+                        <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729498511/SLPM_logo_ttnmes.jpg" alt="Shining Light Psychic Medium Logo" class="custom-navbar-logo offcanvas-logo">
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav custom-navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -259,7 +503,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Psychic Mediumship</h5>
                         <p class="card-text">Connecting you with the spiritual realm through trusted mediums.</p>
-                        <a href="services.html#psychic-mediumship" class="btn btn-learn-more mt-auto">Learn More</a>
+                        <a href="services.html#psychic-mediumship" class="btn btn-gradient mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -269,7 +513,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Animal Communication</h5>
                         <p class="card-text">Understanding your pets on a deeper level with trusted psychics.</p>
-                        <a href="services.html#animal-communication" class="btn btn-learn-more mt-auto">Learn More</a>
+                        <a href="services.html#animal-communication" class="btn btn-gradient mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -279,7 +523,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Reiki Healing</h5>
                         <p class="card-text">Healing energy sent directly to you by a trusted reiki healer.</p>
-                        <a href="services.html#reiki-healing" class="btn btn-learn-more mt-auto">Learn More</a>
+                        <a href="services.html#reiki-healing" class="btn btn-gradient mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -290,31 +534,82 @@
     <section class="testimonial-carousel">
         <div class="container">
             <h2 class="section-title">Client Testimonials</h2>
-            <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="testimonial-item">
-                    <p>"Dale's reading brought me so much peace. She connected with my grandmother in a way that was truly touching." - A.S.</p>
-                  </div>
+            <div class="testimonial-container">
+                <!-- First 4 Reviews -->
+                <div class="testimonial-card">
+                    <p class="review-text">"Dale gifted me a couple of cards and was bang on with what he said. Very grateful for the reading. Thank you Dale."</p>
+                    <p class="reviewer-name">- Chris</p>
                 </div>
-                <div class="carousel-item">
-                  <div class="testimonial-item">
-                    <p>"Her insights were spot-on and helped me make a difficult decision with confidence." - J.M.</p>
-                  </div>
+                <div class="testimonial-card">
+                    <p class="review-text">"Dale is very passionate and very polite. He always gives the best information he possibly can. I highly recommend him. He drew 1 card for me today and hit my situation spot on! I truly appreciate him and what he is doing to help others shine some light on the path they are on!"</p>
+                    <p class="reviewer-name">- Heather</p>
                 </div>
-                <!-- Add more testimonials as needed -->
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
-                <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                <div class="testimonial-card">
+                    <p class="review-text">"Had 2 readings from Dale now. Spot on each time. The statue you talk about is a Buddha. I have lots of them. I love them and feel they give off great energy. Thanks again you have an amazing talent."</p>
+                    <p class="reviewer-name">- Fiona</p>
+                </div>
+                <div class="testimonial-card">
+              <p class="review-text">"Had my first reading with Dale today on one of his lives. He is very talented, picked up on many things that have recently been happening in my life as well as things from my past lives that I am aware of. There were multiple things that he picked up on that were accurate. Very gifted - Highly recommended."</p>
+                    <p class="reviewer-name">- Missy</p>
+                </div>
+                <!-- Additional Reviews (Initially Hidden) -->
+                <div class="testimonial-card d-none">
+                
+          <p class="review-text">"Well what can I say? Dale and I were chatting today, and we both ended up giving readings to each other. Dale was very accurate and actually, word for word said something to me about my sister. I relayed all the messages to her, and she said that she had been to a medium last week, and Dale had told me the exact message that spirit gave to my sister through a different medium. Also Dale, she has already put diesel in her petrol car and swore! Many of my spirit family came through and passed messages on which I was able to relate to. Dale is one of those rare genuine souls who cares about the messages he passes on. A fantastic afternoon Dale, I cannot believe we spoke for nearly three hours! To anyone still hesitating, book a reading with Dale, you will not be disappointed, he will put you at your ease and offer excellent, caring advice and messages. A true genuine spiritual medium. Love and Light Dale."</p>
+                    <p class="reviewer-name">- Lorraine</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"I've just had a reading for the first time with Dale. I was totally blown away with the messages I received. Everything he said was 100% accurate. He is truly gifted. Thank you x."</p>
+                    <p class="reviewer-name">- Maria</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"I had a reading with Dave, and I was surprised, by how he described some things, he has a gift hands down. I enjoyed my reading, I recommend him, it's not the regular readings you get with tarot card…"</p>
+                    <p class="reviewer-name">- Nuryam</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"I was blessed yesterday evening to have a reading from the lovely Dale. Dale is absolutely amazing at what he does, absolutely spot on with everything Dale. You have given me a great lift here today and thank you so much. I highly recommend Dale, he is just fantastic at what he does xxx love and light Dale and thank you again for everything."</p>
+                    <p class="reviewer-name">- Adele</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Had a reading tonight and it was all spot on. Thank you so much for my reading. Will keep an eye out for my celebration."</p>
+                    <p class="reviewer-name">- Melissa</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Had a reading by Dale was so amazing got a lot of things that I could relate to. Would definitely recommend to anyone to get a reading done xxx."</p>
+                    <p class="reviewer-name">- Shelley</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Had an amazing reading from Dale tonight on his live. Everything was accurate, was totally amazed. Thank you so much for reading for me x."</p>
+                    <p class="reviewer-name">- Izzy</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Dale has done a few readings for me. He has been right and very helpful. He connected with my ancestors for sure."</p>
+                    <p class="reviewer-name">- Brenda</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Just had an amazing reading from Dale on his live, everything was spot on. I'm in shock! An amazing gift you have Dale, I appreciate you taking the time to read for me. Would definitely rate you 10/10."</p>
+                    <p class="reviewer-name">- Carla</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Brilliant reading, knew things that not just anyone could pick up. Blew me away."</p>
+                    <p class="reviewer-name">- David</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"I highly recommend Dale to anybody, he is so talented. Dale was spot on with everything he said, and nobody knows the things he was saying but me and my family. Dale has such a special gift. I can't thank you enough Dale."</p>
+                    <p class="reviewer-name">- Joanne</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Had a reading from Dale and I'm so amazed how detailed he was.. I was even more when day by day I'm messaging Dale to say how it resonated with me. Never stop at what you do Dale truly gifted x."</p>
+                    <p class="reviewer-name">- Karen</p>
+                </div>
+                <div class="testimonial-card d-none">
+                    <p class="review-text">"Absolutely amazing medium. Everything that was said was absolutely correct and spot on. I highly recommend a reading. Always believe in yourself you're brilliant at what you do."</p>
+                    <p class="reviewer-name">- Lynsey</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <!-- Show More Button -->
+            <button class="show-more-btn mt-4" id="showMoreBtn">Show More Reviews</button>
+        </section>
 
     <!-- How I Conduct Readings Section -->
     <section id="how-i-conduct-readings" class="container mt-5">
@@ -347,5 +642,32 @@
 
     <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for Show More Reviews -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const showMoreBtn = document.getElementById('showMoreBtn');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            const initialVisible = 4; // Number of reviews to show initially
+            const totalReviews = testimonialCards.length;
+
+            // Initially hide all reviews after the first 4
+            for(let i = initialVisible; i < totalReviews; i++) {
+                testimonialCards[i].classList.add('d-none');
+            }
+
+            // Event listener for Show More button
+            showMoreBtn.addEventListener('click', function() {
+                for(let i = initialVisible; i < totalReviews; i++) {
+                    testimonialCards[i].classList.toggle('d-none');
+                }
+                if(showMoreBtn.textContent === 'Show More Reviews') {
+                    showMoreBtn.textContent = 'Show Less Reviews';
+                } else {
+                    showMoreBtn.textContent = 'Show More Reviews';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

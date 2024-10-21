@@ -4,53 +4,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
 /* General Styles */
-
-
-/* Navbar Styles */
-.navbar {
-    background: linear-gradient(to bottom, #000000, #4b3069);
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Adjust to navbar height */
+    background-color: #ffffff; /* Set body background to white */
+    color: #333333; /* Set default text color to dark */
 }
 
-.navbar-brand, .nav-link {
+/* Custom Navbar Styles */
+.custom-navbar {
+    background: linear-gradient(to bottom, #000000, #4b3069); /* Preserved gradient */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.custom-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Website Title */
+.navbar-title {
+    font-family: 'Playfair Display', serif;
+    color: #dbccb6;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.navbar-title:hover {
+    color: #d4a56d;
+
+}
+
+/* Logo Styles */
+.custom-navbar-logo {
+    width: 200px;
+    height: auto;
+    border: 3px solid #b28d55; /* Purple outline */
+    border-radius: 10px;
+    display: none; /* Hidden by default */
+}
+
+/* Show logo on medium and large screens */
+@media (min-width: 992px) {
+    .custom-navbar-logo.desktop-logo {
+        display: block; /* Show on medium and large screens */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Navigation Links */
+.custom-navbar-nav {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    color: #dbccb6 !important;
     text-transform: uppercase;
 }
 
-.nav-link {
+.custom-navbar-nav .nav-link {
+    color: #dbccb6 !important;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-.nav-link:hover {
+.custom-navbar-nav .nav-link:hover,
+.custom-navbar-nav .nav-link:focus {
     background: linear-gradient(to right, #b28d55, #b692c1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: #dbccb6 !important;
 }
 
-.navbar-toggler {
+/* Navbar Toggler */
+.custom-navbar-toggler {
     border: none;
-}
-
-.navbar-toggler-icon {
     color: #b28d55;
 }
 
-.navbar-collapse {
-    justify-content: flex-end;
+.navbar-toggler {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
 }
 
-.navbar-nav {
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-navbar-toggler .navbar-toggler-icon {
+    color: #b28d55;
+    font-size: 1.5em;
+padding-top: 0px;
+}
+
+/* Offcanvas Side Menu */
+.custom-offcanvas {
+    background: linear-gradient(to bottom, #000000, #4b3069); /* Preserved gradient */
+    color: #dbccb6;
+}
+
+.custom-offcanvas .offcanvas-header {
+    border-bottom: 1px solid #4b3069;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@media (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
+.custom-offcanvas .offcanvas-logo {
+    width: 200px;
+    height: auto;
+    border: 3px solid #b28d55; /* Purple outline */
+    border-radius: 10px;
+    display: block;
+
+    
+}
+
+.custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link {
+    color: #dbccb6 !important;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link:hover,
+.custom-offcanvas .offcanvas-body .custom-navbar-nav .nav-link:focus {
+    background: linear-gradient(to right, #b28d55, #b692c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #dbccb6 !important;
+}
+
+/* Hide navbar links on small screens */
+@media (max-width: 991.98px) {
+    .custom-navbar-links {
+        display: none !important;
     }
-    .nav-link {
-        padding: 0.5rem 0;
+.custom-navbar {
+     /* Preserved gradient */
+    padding: 0;
+padding-top:15px;
+padding-bottom: 15px;
+}
+
+/* Show navbar links on medium and large screens */
+@media (min-width: 992px) {
+    .custom-navbar-links {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+/* Responsive Logo Sizes */
+@media (max-width: 991.98px) {
+    .custom-offcanvas .offcanvas-logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-offcanvas .offcanvas-logo {
+        width: 120px;
     }
 }
 
@@ -151,7 +276,23 @@ hr {
 
 /* Responsive Adjustments */
 @media (max-width: 767px) {
-    .navbar-brand {
+    .navbar-title {
         font-size: 1.2em;
     }
 }
+
+@media (max-width: 375px) {
+    .navbar-title {
+        font-size: 1.0em;
+margin-bottom: 15px;
+    }
+.custom-navbar-toggler .navbar-toggler-icon {
+
+padding-top: 0px;
+}
+}
+
+@media (max-width: 426px) {.custom-navbar-toggler .navbar-toggler-icon {
+
+padding-top: 10px;
+}}

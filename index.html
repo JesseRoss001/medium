@@ -1,79 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags with Keywords -->
     <meta charset="UTF-8">
-    <title>Shining Light Psychic Medium - Home</title>
+    <title>Trusted Psychics & Mediums Near Me | Shining Light Psychic Medium</title>
+    <meta name="description" content="Shining Light Psychic Medium offers trusted psychics and mediums near you. Connect with a gifted medium and reiki healer to gain clarity and peace.">
+    <meta name="keywords" content="medium, psychic near me, trusted psychics, mediums near me, reiki healer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.shininglightpsychicmedium.com/" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Trusted Psychics & Mediums Near Me - Shining Light Psychic Medium">
+    <meta property="og:description" content="Connect with a trusted medium and reiki healer at Shining Light Psychic Medium. Offering compassionate and insightful readings to help you find clarity.">
+    <meta property="og:image" content="smokey-background.jpg">
+    <meta property="og:url" content="https://www.shininglightpsychicmedium.com">
+    <meta property="og:type" content="website">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Styles -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <style>
-        /* Additional Styles for Home Page */
+        /* Body and General Styles */
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding-top: 70px; /* Adjust to navbar height */
+            background-color: #ffffff; /* Set body background to white */
+            color: #333333; /* Set default text color to dark */
+        }
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: #4b3069;
+            font-size: 1.8em;
+        }
+        .nav-link {
+            color: #4b3069;
+            margin-left: 15px;
+            font-weight: 600;
+        }
+        .nav-link.active {
+            color: #d4a56d;
+        }
+        /* Hero Section */
         .hero {
-            background-image: url('smokey-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            padding: 200px 0;
+            background-color: #ffffff; /* Change hero background to white */
+            padding: 100px 0; /* Adjust padding as needed */
             text-align: center;
             position: relative;
+            color: #333333; /* Set text color to dark */
         }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-        }
-
         .hero-content {
             position: relative;
             z-index: 1;
+            padding: 0 15px;
         }
-
         .hero h1 {
-            font-size: 4em;
+            font-size: 3em;
             background: linear-gradient(to right, #b28d55, #d4a56d);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px #000000;
+            margin-bottom: 20px;
         }
-
         .hero p {
-            font-size: 1.5em;
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
-
+        /* Remove hero overlay */
+        .hero::after {
+            display: none;
+        }
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: #4b3069;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a56d, #b28d55);
+            display: block;
+            margin: 10px auto;
+        }
+        /* About Me */
+        #about-me img {
+            border: 5px solid #b28d55;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        /* Button Gradient */
+        .btn-gradient {
+            background: linear-gradient(to right, #b28d55, #d4a56d);
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(to right, #d4a56d, #b28d55);
+            color: #ffffff;
+        }
         /* Testimonials */
         .testimonial-carousel {
-            background-color: #000000;
-            padding: 50px 0;
+            background-color: #ffffff; /* White background */
+            padding: 60px 0;
+            color: #333333; /* Dark text */
         }
-
+        .testimonial-carousel .section-title {
+            color: #4b3069;
+        }
         .testimonial-item {
-            color: #ffffff;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             font-style: italic;
         }
-
         .testimonial-item p {
-            background: linear-gradient(to right, #b28d55, #d4a56d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1em;
         }
-
         .carousel-indicators [data-bs-target] {
-            background-color: #b28d55;
+            background-color: #d4a56d;
+        }
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #777;
+        }
+        .footer a {
+            color: #b28d55;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #b28d55;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #d4a56d;
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .hero {
+                padding: 80px 0;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#">Shining Light Psychic Medium</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -92,9 +218,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Shining Light Psychic Medium</h1>
-            <p>Guiding you to clarity with compassion and insight.</p>
-            <a href="services.html" class="btn btn-gradient mt-4">Explore Services</a>
+            <h1>Trusted Psychics & Mediums Near You</h1>
+            <p>Connecting you with trusted psychics and reiki healers for clarity and peace.</p>
+            <a href="services.html" class="btn btn-gradient mt-4">Explore Our Services</a>
         </div>
     </section>
 
@@ -102,12 +228,12 @@
     <section id="about-me" class="container mt-5">
         <h2 class="section-title">About Me</h2>
         <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="placeholder-profile.jpg" alt="Dale Harty" class="img-fluid rounded-circle mb-3" style="border: 5px solid #b28d55;">
+            <div class="col-12 col-md-4 text-center">
+                <img src="placeholder-profile.jpg" alt="Dale Harty - Trusted Medium" class="img-fluid rounded-circle">
             </div>
-            <div class="col-md-8">
+            <div class="col-12 col-md-8">
                 <p>
-                    Dale Harty is a gifted psychic medium who has dedicated her life to helping others find clarity and peace. With years of experience, she offers compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
+                    Dale Harty is a trusted psychic medium and reiki healer who has dedicated her life to helping others find clarity and peace. With years of experience, she offers compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
                 </p>
                 <a href="#detailed-bio" class="btn btn-gradient mt-3">Learn More About My Journey</a>
             </div>
@@ -116,64 +242,68 @@
 
     <!-- Services Overview Section -->
     <section id="services-overview" class="container mt-5">
-        <h2 class="section-title">Services Overview</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card bg-transparent border-0 h-100">
-                    <img src="placeholder-service1.jpg" class="card-img-top" alt="Psychic Mediumship">
-                    <div class="card-body">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card service-card h-100">
+                    <img src="placeholder-service1.jpg" class="card-img-top img-fluid" alt="Psychic Mediumship Services">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Psychic Mediumship</h5>
-                        <p class="card-text">Connecting you with the spiritual realm.</p>
+                        <p class="card-text">Connecting you with the spiritual realm through trusted mediums.</p>
+                        <a href="services.html#psychic-mediumship" class="btn btn-learn-more mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card bg-transparent border-0 h-100">
-                    <img src="placeholder-service2.jpg" class="card-img-top" alt="Animal Communication">
-                    <div class="card-body">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card service-card h-100">
+                    <img src="placeholder-service2.jpg" class="card-img-top img-fluid" alt="Animal Communication Services">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Animal Communication</h5>
-                        <p class="card-text">Understanding your pets on a deeper level.</p>
+                        <p class="card-text">Understanding your pets on a deeper level with trusted psychics.</p>
+                        <a href="services.html#animal-communication" class="btn btn-learn-more mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card bg-transparent border-0 h-100">
-                    <img src="placeholder-service3.jpg" class="card-img-top" alt="Distance Reiki Healing">
-                    <div class="card-body">
-                        <h5 class="card-title">Distance Reiki Healing</h5>
-                        <p class="card-text">Healing energy sent directly to you.</p>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card service-card h-100">
+                    <img src="placeholder-service3.jpg" class="card-img-top img-fluid" alt="Reiki Healing Services">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Reiki Healing</h5>
+                        <p class="card-text">Healing energy sent directly to you by a trusted reiki healer.</p>
+                        <a href="services.html#reiki-healing" class="btn btn-learn-more mt-auto">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="services.html" class="btn btn-gradient">View Full Services</a>
         </div>
     </section>
 
     <!-- Client Testimonials Section -->
     <section class="testimonial-carousel">
-        <h2 class="section-title">Client Testimonials</h2>
-        <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="testimonial-item">
-                <p>"Dale's reading brought me so much peace. She connected with my grandmother in a way that was truly touching." - A.S.</p>
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial-item">
+                    <p>"Dale's reading brought me so much peace. She connected with my grandmother in a way that was truly touching." - A.S.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-item">
+                    <p>"Her insights were spot-on and helped me make a difficult decision with confidence." - J.M.</p>
+                  </div>
+                </div>
+                <!-- Add more testimonials as needed -->
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+                <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <div class="carousel-item">
-              <div class="testimonial-item">
-                <p>"Her insights were spot-on and helped me make a difficult decision with confidence." - J.M.</p>
-              </div>
-            </div>
-            <!-- Add more testimonials as needed -->
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
         </div>
     </section>
 
@@ -181,7 +311,7 @@
     <section id="how-i-conduct-readings" class="container mt-5">
         <h2 class="section-title">How I Conduct Readings</h2>
         <p>
-            I offer both online and in-person readings to suit your needs. My aim is to create a calm and safe atmosphere where you feel comfortable and open. For online readings, please note that advance payment is required to secure your booking.
+            As a trusted medium and reiki healer, I offer both online and in-person readings to suit your needs. My aim is to create a calm and safe atmosphere where you feel comfortable and open. For online readings, please note that advance payment is required to secure your booking.
         </p>
     </section>
 
@@ -193,12 +323,12 @@
         </p>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <hr>
             <p>Contact Me: <a href="mailto:dale@example.com">dale@example.com</a> | <a href="tel:+1234567890">+1 234 567 890</a></p>
-            <div class="social-icons">
+            <div class="social-icons mb-3">
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <!-- Add other social media icons as needed -->
             </div>
@@ -206,9 +336,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <!-- Include Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>

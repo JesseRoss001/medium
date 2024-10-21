@@ -1,92 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags with Keywords -->
     <meta charset="UTF-8">
-    <title>Shining Light Psychic Medium - Contact Me</title>
+    <title>Contact a Trusted Psychic Near You | Shining Light Psychic Medium</title>
+    <meta name="description" content="Get in touch with Shining Light Psychic Medium for psychic readings, mediumship, clairvoyant consultations, and angel card readings. Start your spiritual journey today.">
+    <meta name="keywords" content="live psychic, medium chat, psychic reading, spiritual medium, clairvoyant, angel card reading, psychic future, best psychics near me, spiritual mediums near me">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.shininglightpsychicmedium.com/contact.html" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Styles -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <style>
-        /* Additional Styles for Contact Page */
-        .contact-section {
-            padding-top: 100px;
-            padding-bottom: 50px;
-        }
-
-        .form-label {
-            color: #b28d55;
+        /* Body and General Styles */
+        body {
             font-family: 'Raleway', sans-serif;
-            text-transform: uppercase;
-            font-weight: 700;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding-top: 70px; /* Adjust to navbar height */
         }
-
-        .btn-gradient {
-            margin-top: 20px;
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: #4b3069;
+            font-size: 1.8em;
+        }
+        .nav-link {
+            color: #4b3069;
+            margin-left: 15px;
+            font-weight: 600;
+        }
+        .nav-link.active {
+            color: #d4a56d;
+        }
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: #4b3069;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a56d, #b28d55);
+            display: block;
+            margin: 10px auto;
+        }
+        /* Contact Form */
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            color: #4b3069;
+            font-weight: 600;
+        }
+        .form-control {
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn-submit {
+            background: linear-gradient(90deg, #d4a56d, #b28d55);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: linear-gradient(90deg, #b28d55, #d4a56d);
+        }
+        /* Contact Details */
+        .contact-details {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .contact-details p {
+            font-size: 1.2em;
+            color: #4b3069;
+        }
+        .contact-details a {
+            color: #d4a56d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Social Icons */
+        .social-icons a {
+            color: #4b3069;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #d4a56d;
+        }
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+        .accordion-button {
+            font-weight: 600;
+            color: #4b3069;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #d4a56d;
+        }
+        .accordion-body {
+            color: #555;
+        }
+        /* Testimonials */
+        .testimonial {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .testimonial em {
+            color: #4b3069;
+            font-weight: 600;
+        }
+        /* Footer */
+        .footer {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            color: #777;
+        }
+        .footer a {
+            color: #d4a56d;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 2em;
+            }
+            .navbar-brand {
+                font-size: 1.5em;
+            }
+            .contact-details p {
+                font-size: 1em;
+            }
+            .btn-submit {
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Shining Light Psychic Medium</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html#about-me">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container contact-section">
-        <h1 class="section-title">Contact Me</h1>
-        <p class="text-center">For online readings, advance payment is required.</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <!-- Contact Form -->
-                <form id="contact-form" method="POST" action="#">
-                    <!-- Note: The Web3 contact form requires an API key, which is not included -->
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-gradient">Send Message</button>
-                </form>
+    <!-- Navbar (Do Not Restyle) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Shining Light Psychic Medium</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-me">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Contact Details -->
-        <div class="text-center mt-5">
-            <p>Email: <a href="mailto:dale@example.com">dale@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
-            <div class="social-icons">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <!-- Add other social media icons as needed -->
+    <!-- Contact Header -->
+    <header class="container text-center">
+        <h1 class="section-title">Contact a <span style="color: #d4a56d;">Trusted Psychic Near You</span></h1>
+        <p>Embark on your spiritual journey with a trusted psychic medium.</p>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h2 class="text-center mb-4">Get in Touch</h2>
+                    <form id="contact-form" method="POST" action="#">
+                        <!-- Note: Form processing requires a backend script -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" required placeholder="Your Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Interested Service *</label>
+                            <select class="form-control" id="service" name="service" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="psychic-reading">Psychic Reading</option>
+                                <option value="mediumship">Mediumship</option>
+                                <option value="clairvoyant-consultation">Clairvoyant Consultation</option>
+                                <option value="angel-card-reading">Angel Card Reading</option>
+                                <option value="live-psychic">Live Psychic Session</option>
+                                <option value="medium-chat">Medium Chat</option>
+                                <!-- Add other services as needed -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message or Questions"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Contact Details -->
+    <section class="contact-details">
+        <p>Email: <a href="mailto:dale@example.com">dale@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <!-- Add other social media icons as needed -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                        How can I book a live psychic reading?
+                    </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can book a <strong>live psychic</strong> reading by filling out the contact form above or by calling us directly at <a href="tel:+1234567890">+1 234 567 890</a>. We offer both in-person and online sessions.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                        Do you offer medium chat services?
+                    </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer <strong>medium chat</strong> services for those who prefer online consultations. Please indicate your preference when you contact us, and we'll arrange a convenient time.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                        What types of payment do you accept?
+                    </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We accept advance payments through credit/debit cards, PayPal, and bank transfers for all online readings.
+                    </div>
+                </div>
+            </div>
+            <!-- Add more FAQs as needed -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container">
+        <div class="testimonial">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p>"I had an amazing experience with Dale. The <strong>psychic reading</strong> was insightful and helped me gain clarity about my future. Highly recommend!"</p>
+            <p><em>- Jane Doe</em></p>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <!-- Footer (Do Not Restyle) -->
     <footer class="footer">
         <div class="container">
             <hr>
             <p>Contact Me: <a href="mailto:dale@example.com">dale@example.com</a> | <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p>
+                Services: <a href="services.html">Psychic Readings</a>, <a href="services.html">Mediumship</a>, <a href="services.html">Clairvoyant Consultations</a>
+            </p>
             <div class="social-icons">
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <!-- Add other social media icons as needed -->
@@ -95,9 +339,19 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <!-- Include Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <!-- Smooth Scroll (Optional) -->
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>

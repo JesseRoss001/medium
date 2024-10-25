@@ -12,9 +12,10 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Trusted Psychics & Mediums Near Me - Shining Light Psychic Medium">
     <meta property="og:description" content="Connect with a trusted medium and reiki healer at Shining Light Psychic Medium. Offering compassionate and insightful readings to help you find clarity.">
-    <meta property="og:image" content="smokey-background.jpg">
+    <meta property="og:image" content="https://res.cloudinary.com/dsedezvzs/image/upload/v1729514353/DALL_E_2024-10-21_12.18.47_-_A_creative_depiction_of_reiki_healing_focusing_on_mystical_objects_in_a_serene_smoke-filled_setting._The_scene_features_glowing_crystals_healing_st_wjf2uh.jpg">
     <meta property="og:url" content="https://www.shininglightpsychicmedium.com">
     <meta property="og:type" content="website">
+<link rel="icon" href="https://res.cloudinary.com/dsedezvzs/image/upload/v1729865041/WhatsApp_Image_2024-10-25_at_21.01.55_df73d90e_tuh4k5.jpg" type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -420,6 +421,58 @@
                 font-size: 1.8em;
             }
         }
+
+ /* Modal Styles */
+    /* Modal Styles */
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  color: #4b3069;
+}
+
+.modal-body p {
+  color: #333333;
+  font-size: 1em;
+}
+
+/* Certificate Image Styles */
+.modal-body img {
+  border: 2px solid #b28d55;
+  border-radius: 10px;
+}
+
+/* Adjust the spacing between certificate images */
+.modal-body .row {
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for certificates */
+@media (max-width: 576px) {
+  .modal-body .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Modal Image Styling */
+#imageModal .modal-body {
+  padding: 0;
+}
+
+#imageModal .modal-body img {
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+#imageModal .modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+#imageModal .modal-footer {
+  background-color: transparent;
+  border-top: none;
+}
+
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -480,20 +533,115 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about-me" class="container mt-5">
-        <h2 class="section-title">About Me</h2>
-        <div class="row align-items-center">
-            <div class="col-12 col-md-4 text-center">
-                <img src="placeholder-profile.jpg" alt="Dale Harty - Trusted Medium" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-12 col-md-8">
-                <p>
-                    Dale Harty is a trusted psychic medium and reiki healer who has dedicated her life to helping others find clarity and peace. With years of experience, she offers compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
-                </p>
-                <a href="#detailed-bio" class="btn btn-gradient mt-3">Learn More About My Journey</a>
-            </div>
+ <!-- About Me Section -->
+<!-- About Me Section -->
+<section id="about-me" class="container mt-5">
+    <h2 class="section-title">About Me</h2>
+    <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-center">
+            <!-- Replace 'your-profile-image.jpg' with your actual profile image URL -->
+            <img src="your-profile-image.jpg" alt="Dale Hartnell - Trusted Medium" class="img-fluid rounded-circle">
         </div>
-    </section>
+        <div class="col-12 col-md-8">
+            <p>
+                Hello! I'm Dale Hartnell, a trusted psychic medium and reiki healer dedicated to helping others find clarity and peace. With years of experience, I offer compassionate and insightful readings that connect clients with their loved ones and provide guidance on life's journey.
+            </p>
+            <!-- Button to Open Modal -->
+            <button type="button" class="btn btn-gradient mt-3" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                Learn More About My Journey
+            </button>
+        </div>
+    </div>
+</section>
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center w-100" id="aboutModalLabel">About Me</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- Full About Text -->
+        <p>Hello! I'm Dale Hartnell, and I'm excited to share my journey as the owner of Shining Light Psychic Medium with you!</p>
+        <p>Growing up, life was a bit of a challenge for me. I left school around the age of 14 or 15, and making friends was tough. I often felt different when it came to friendships and relationships, which was hard at times.</p>
+        <p>From a young age, I could see and sense things that others couldn't, and it was both fascinating and a little scary. I didn't share my feelings or struggles much, which left me feeling quite alone. Holding down a job was tricky too, and I couldn't figure out why. There were moments when I found myself in hospitals, feeling overwhelmed by everything I was experiencing.</p>
+        <p>Then, everything changed in 2021! While browsing Facebook one day, I stumbled upon a psychic page that truly caught my attention. Meeting a psychic medium who understood what I was going through was such a relief! He offered me both spiritual and mental support, and I even had the chance to attend his very first workshop. That experience opened so many doors for me, and I haven't looked back since!</p>
+        <p>Now, I help manage his page and explore various workshops to continue growing and learning.</p>
+        <p>Thank you for taking the time to read a bit about my story!</p>
+
+        <!-- Certificates Section -->
+        <h5 class="mt-4">My Certificates</h5>
+        <div class="row">
+          <!-- Certificate 1 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462560080_8472710909503334_9161996023604285611_n_cfa3cn.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462560080_8472710909503334_9161996023604285611_n_cfa3cn.jpg" alt="Certificate 1" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 2 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462542333_1096836054629383_7443673738219773279_n_fftrob.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462542333_1096836054629383_7443673738219773279_n_fftrob.jpg" alt="Certificate 2" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 3 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462547226_526392456828513_2417141944728464243_n_bfwhww.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462547226_526392456828513_2417141944728464243_n_bfwhww.jpg" alt="Certificate 3" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 4 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462568458_491194777234114_5627973167486521813_n_lf0h3l.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462568458_491194777234114_5627973167486521813_n_lf0h3l.jpg" alt="Certificate 4" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 5 -->
+          <div class="col-6 col-md-4 col-lg-3  mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462540598_1671954763352052_8325910550209336892_n_ltrojc.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462540598_1671954763352052_8325910550209336892_n_ltrojc.jpg" alt="Certificate 5" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 6 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462547358_852949989998992_4931651747257889824_n_pvttne.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862940/462547358_852949989998992_4931651747257889824_n_pvttne.jpg" alt="Certificate 6" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 7 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462567218_1077756533731316_1608370098262756558_n_avesn3.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462567218_1077756533731316_1608370098262756558_n_avesn3.jpg" alt="Certificate 7" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <!-- Certificate 8 -->
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462567844_1237543320825799_5059675980686078231_n_njzjxw.jpg">
+              <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1729862939/462567844_1237543320825799_5059675980686078231_n_njzjxw.jpg" alt="Certificate 8" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-gradient" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Image Zoom Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="" alt="Certificate Zoom" class="img-fluid w-100">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-gradient" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Services Overview Section -->
     <section id="services-overview" class="container mt-5">
@@ -505,7 +653,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Psychic Mediumship</h5>
                         <p class="card-text">Connecting you with the spiritual realm through trusted mediums.</p>
-                        <a href="services.html#psychic-mediumship" class="btn btn-gradient mt-auto">Learn More</a>
+                        <a href="services.html#psychic-mediumship" class="btn btn-gradient mt-auto">Learn more about mediumship</a>
                     </div>
                 </div>
             </div>
@@ -515,7 +663,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Animal Communication</h5>
                         <p class="card-text">Understanding your pets on a deeper level with trusted psychics.</p>
-                        <a href="services.html#animal-communication" class="btn btn-gradient mt-auto">Learn More</a>
+                        <a href="services.html#animal-communication" class="btn btn-gradient mt-auto"> Book a session </a>
                     </div>
                 </div>
             </div>
@@ -525,7 +673,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Reiki Healing</h5>
                         <p class="card-text">Healing energy sent directly to you by a trusted reiki healer.</p>
-                        <a href="services.html#reiki-healing" class="btn btn-gradient mt-auto">Learn More</a>
+                        <a href="services.html#reiki-healing" class="btn btn-gradient mt-auto">Trusted reiki healing </a>
                     </div>
                 </div>
             </div>
@@ -624,7 +772,7 @@
     <section id="privacy-disclaimer" class="container mt-5 mb-5">
         <h2 class="section-title">Privacy & Legal Disclaimer</h2>
         <p>
-            Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Please be aware that while my services can be therapeutic, they are also considered entertainment.
+            Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Contact me personally for any concerns or questions regarding privacy or legal matters.
         </p>
     </section>
 
@@ -632,12 +780,12 @@
     <footer class="footer">
         <div class="container">
             <hr>
-            <p>Contact Me: <a href="mailto:dale@example.com">dale@example.com</a> | <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p>Contact Me: <a href="mailto:shininglightpsychicmedium@gmail.com">shininglightpsychicmedium@gmail.com</a> | <a href="tel:+447597213886">+447597213886</a></p>
             <div class="social-icons mb-3">
-                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.facebook.com/shininglightpychicmedium" target="_blank"><i class="bi bi-facebook"></i></a>
                 <!-- Add other social media icons as needed -->
             </div>
-            <p>&copy; 2023 Shining Light Psychic Medium</p>
+            <p>&copy; 2024 Shining Light Psychic Medium</p>
         </div>
     </footer>
 
@@ -670,5 +818,19 @@
             });
         });
     </script>
+<script>
+  // Image Zoom Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    var imageModal = document.getElementById('imageModal');
+    imageModal.addEventListener('show.bs.modal', function (event) {
+      var triggerElement = event.relatedTarget; // Element that triggered the modal
+      var imageSrc = triggerElement.getAttribute('data-bs-image'); // Extract image URL from data-bs-image attribute
+      var modalImage = imageModal.querySelector('.modal-body img');
+      modalImage.src = imageSrc;
+    });
+  });
+</script>
+
+
 </body>
 </html>

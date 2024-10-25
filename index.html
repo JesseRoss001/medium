@@ -473,6 +473,183 @@
   border-top: none;
 }
 
+/* Cookie Consent Modal Styles */
+#cookieConsentModal .modal-content {
+  background-color: #ffffff;
+  border: 2px solid #b28d55;
+  border-radius: 10px;
+}
+
+#cookieConsentModal .modal-body p {
+  font-size: 1em;
+  color: #333333;
+}
+
+#cookieConsentModal .modal-body a {
+  color: #b28d55;
+  text-decoration: underline;
+}
+
+#cookieConsentModal .btn-gradient {
+  background: linear-gradient(to right, #b28d55, #d4a56d);
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+#cookieConsentModal .btn-gradient:hover {
+  background: linear-gradient(to right, #d4a56d, #b28d55);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#cookieConsentModal .btn-secondary {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+/* Privacy and Cookie Consent Modal Styles */
+#privacyCookieConsentModal .modal-content {
+  border-radius: 10px;
+  border: 2px solid #b28d55;
+}
+
+#privacyCookieConsentModal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+#privacyCookieConsentModal .modal-title {
+  font-family: 'Playfair Display', serif;
+  color: #4b3069;
+}
+
+#privacyCookieConsentModal .modal-body h6 {
+  color: #4b3069;
+  margin-top: 15px;
+}
+
+#privacyCookieConsentModal .modal-body a {
+  color: #b28d55;
+  text-decoration: underline;
+}
+
+#privacyCookieConsentModal .modal-footer {
+  border-top: none;
+}
+
+#privacyCookieConsentModal .btn-gradient {
+  background: linear-gradient(to right, #b28d55, #d4a56d);
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+#privacyCookieConsentModal .btn-gradient:hover {
+  background: linear-gradient(to right, #d4a56d, #b28d55);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#privacyCookieConsentModal .btn-secondary {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+/* Customize Cookie Settings Modal Styles */
+#customizeCookiesModal .modal-content {
+  border-radius: 10px;
+  border: 2px solid #b28d55;
+}
+
+#customizeCookiesModal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+#customizeCookiesModal .modal-title {
+  font-family: 'Playfair Display', serif;
+  color: #4b3069;
+}
+
+#customizeCookiesModal .modal-body h6 {
+  color: #4b3069;
+  margin-top: 15px;
+}
+
+#customizeCookiesModal .modal-footer {
+  border-top: none;
+}
+
+#customizeCookiesModal .btn-gradient {
+  background: linear-gradient(to right, #b28d55, #d4a56d);
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+#customizeCookiesModal .btn-gradient:hover {
+  background: linear-gradient(to right, #d4a56d, #b28d55);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#customizeCookiesModal .btn-secondary {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+
+    #privacyPolicyModal .modal-content {
+          border-radius: 10px;
+          border: 2px solid #b28d55;
+        }
+
+        #privacyPolicyModal .modal-header {
+          background-color: #f8f9fa;
+          border-bottom: 1px solid #dee2e6;
+        }
+
+        #privacyPolicyModal .modal-title {
+          font-family: 'Playfair Display', serif;
+          color: #4b3069;
+        }
+
+        #privacyPolicyModal .modal-body p, 
+        #privacyPolicyModal .modal-body h6, 
+        #privacyPolicyModal .modal-body ul {
+          color: #333333;
+        }
+
+        #privacyPolicyModal .modal-body a {
+          color: #b28d55;
+          text-decoration: underline;
+        }
+
+        #privacyPolicyModal .modal-footer {
+          border-top: none;
+        }
+
+        #privacyPolicyModal .btn-secondary {
+          border-radius: 30px;
+          font-weight: 600;
+          padding: 10px 20px;
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -769,12 +946,65 @@
     </section>
 
     <!-- Privacy and Legal Disclaimer Section -->
-    <section id="privacy-disclaimer" class="container mt-5 mb-5">
-        <h2 class="section-title">Privacy & Legal Disclaimer</h2>
+<section id="privacy-disclaimer" class="container mt-5 mb-5">
+    <h2 class="section-title">Privacy & Legal Disclaimer</h2>
+    <p>
+        Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Contact me personally for any concerns or questions regarding privacy or legal matters.
+    </p>
+    <!-- Updated Privacy Policy Link to Trigger Informational Modal -->
+    <button class="show-more-btn mt-4" href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</button>
+</section>
+
+<!-- Cookie Consent Modal -->
+<div class="modal fade" id="cookieConsentModal" tabindex="-1" aria-labelledby="cookieConsentModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <p>We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies. Read more in our Privacy Policy</a>.</p>
+        <button type="button" class="btn btn-gradient me-2" id="acceptCookiesBtn">Accept</button>
+        <button type="button" class="btn btn-secondary" id="declineCookiesBtn">Decline</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Privacy and Cookie Consent Modal -->
+<!-- Privacy Policy Informational Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyPolicyModalLabel">Privacy Policy</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <p>
-            Your privacy is of utmost importance. All readings are confidential, and any personal data is handled with care. Contact me personally for any concerns or questions regarding privacy or legal matters.
+          We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
         </p>
-    </section>
+        <h6>Data Collection</h6>
+        <p>
+          We may collect personal information such as your name, email address, and contact details when you use our services or contact us directly.
+        </p>
+        <h6>Data Usage</h6>
+        <p>
+          Your data is used to provide and improve our services, communicate with you, and comply with legal obligations. We do not sell or share your personal information with third parties without your consent.
+        </p>
+        <h6>Data Protection</h6>
+        <p>
+          We implement appropriate security measures to protect your data from unauthorized access, alteration, or destruction.
+        </p>
+        <h6>Your Rights</h6>
+        <p>
+          You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us directly.
+        </p>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -830,6 +1060,40 @@
     });
   });
 </script>
+
+<script>
+  // Function to check if cookies are accepted
+  function checkCookieConsent() {
+    return localStorage.getItem('cookiesAccepted') === 'true';
+  }
+
+  // Function to show the cookie consent modal if not accepted or declined
+  function showCookieConsent() {
+    if (localStorage.getItem('cookiesAccepted') === null) {
+      var cookieConsentModal = new bootstrap.Modal(document.getElementById('cookieConsentModal'));
+      cookieConsentModal.show();
+    }
+  }
+
+  // Event listeners for Accept and Decline buttons
+  document.getElementById('acceptCookiesBtn').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    var cookieConsentModal = bootstrap.Modal.getInstance(document.getElementById('cookieConsentModal'));
+    cookieConsentModal.hide();
+  });
+
+  document.getElementById('declineCookiesBtn').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    var cookieConsentModal = bootstrap.Modal.getInstance(document.getElementById('cookieConsentModal'));
+    cookieConsentModal.hide();
+  });
+
+  // Show the cookie consent modal on page load if needed
+  document.addEventListener('DOMContentLoaded', function() {
+    showCookieConsent();
+  });
+</script>
+
 
 
 </body>
